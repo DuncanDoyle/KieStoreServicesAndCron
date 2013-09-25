@@ -57,7 +57,6 @@ public class TestStorage {
 		session.fireAllRules();
 
 		final int numberOfFacts = session.getFactHandles().size();
-		System.out.println("Number of facts should be 2: " + numberOfFacts);
 		
 		Assert.assertTrue(numberOfFacts >= 1);
 		session.dispose();
@@ -95,7 +94,6 @@ public class TestStorage {
 		session.fireAllRules();
 
 		final int numberOfFacts = session.getFactHandles().size();
-		System.out.println("Number of facts should be 2: " + numberOfFacts);
 		
 		Assert.assertTrue(numberOfFacts >= 1);
 		session.dispose();
@@ -107,7 +105,6 @@ public class TestStorage {
 		session.fireAllRules();
 		
 		int afterLoadNumberOfFacts = session.getFactHandles().size();
-		System.out.println("Number of facts, probably 3: " + afterLoadNumberOfFacts);
 		Assert.assertTrue(afterLoadNumberOfFacts > numberOfFacts);
 		
 		Thread.sleep(3000);
@@ -115,7 +112,6 @@ public class TestStorage {
 		session.fireAllRules();
 		
 		afterLoadNumberOfFacts = session.getFactHandles().size();
-		System.out.println("Number of facts, probably 4: " + afterLoadNumberOfFacts);
 		Assert.assertTrue(afterLoadNumberOfFacts > numberOfFacts);
 		
 		session.dispose();
